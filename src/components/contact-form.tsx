@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { WHATSAPP_DISPLAY } from "@/data/site";
+import { BRAND_FULL, WHATSAPP_DISPLAY } from "@/data/site";
 import { whatsappHref } from "@/lib/whatsapp";
 
 export function ContactForm() {
   const [name, setName] = useState("");
   const [note, setNote] = useState("");
 
-  const message = `Hello Raj Dryfruits,
+  const message = `Hello Ganga Sales | Konatural,
 
 I would like to inquire about your products.
 
@@ -54,7 +54,7 @@ Thank you.`;
           required
           rows={5}
           value={note}
-          placeholder="What would you like to inquire about? (Dry fruits, gift hampers, bulk orders, festival boxes, custom packaging...)"
+          placeholder="What would you like to inquire about? (Dry fruits, spices, gift hampers, bulk wholesale orders, corporate boxes, custom packaging...)"
           onChange={(event) => setNote(event.target.value)}
           className="mt-1 w-full rounded-xl border border-stone-200 bg-white p-4 text-sm text-ink outline-none transition focus:border-[#6E2635]"
         />
@@ -71,7 +71,7 @@ Thank you.`;
       </button>
 
       <p className="mt-3 text-center text-[11px] text-stone-400">
-        Direct chat with the Raj Dryfruits team. No automated bots.
+        Direct chat with the {BRAND_FULL} team. No automated bots.
       </p>
     </form>
   );

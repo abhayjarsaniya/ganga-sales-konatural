@@ -13,7 +13,7 @@ import { generalInquiryMessage, whatsappHref } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Contact & Store Location",
   description:
-    "Visit Raj Dryfruits & Mukhwas at Anand Nagar Road, Ahmedabad or send an inquiry on WhatsApp +91 9712698899.",
+    "Visit Ganga Sales | Konatural at Mojadi Market Road, Bardolpura, Madhupura, Ahmedabad or send an inquiry on WhatsApp +91 82003 66244.",
 };
 
 export default function ContactPage() {
@@ -28,7 +28,7 @@ export default function ContactPage() {
             Tell Us What You Would Like.
           </h1>
           <p className="mt-5 max-w-md text-base leading-relaxed text-stone-600">
-            Availability, fresh pricing and delivery are confirmed directly in chat. Write to us, or visit our retail store in Ahmedabad.
+            Availability, fresh pricing and doorstep delivery are confirmed directly in chat. Write to us, or visit our store in Madhupura, Ahmedabad.
           </p>
 
           <div className="mt-8 rounded-2xl border border-stone-200 bg-[#fbf9f6] p-4 min-[360px]:p-5 sm:p-6">
@@ -43,7 +43,7 @@ export default function ContactPage() {
               <p className="font-medium text-ink">{STORE_ADDRESS.line1}</p>
               <p>{STORE_ADDRESS.line2}</p>
               <p>{STORE_ADDRESS.area}, {STORE_ADDRESS.city}</p>
-              <p>{STORE_ADDRESS.state} – {STORE_ADDRESS.pincode}</p>
+              <p>{STORE_ADDRESS.state} – {STORE_ADDRESS.pincode}, {STORE_ADDRESS.country}</p>
             </address>
 
             <div className="mt-4 flex flex-col gap-2 min-[400px]:flex-row min-[400px]:flex-wrap min-[400px]:items-center min-[400px]:gap-3">
@@ -68,7 +68,7 @@ export default function ContactPage() {
           </div>
 
           <p className="mt-6 text-xs text-stone-500">
-            Open through the week for inquiries, tasting and store visits.
+            Serving retail, wholesale and custom corporate gifting inquiries throughout the week.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Great_Vibes, Outfit } from "next/font/google";
-import { absoluteUrl, BRAND, BRAND_FULL, siteUrl, STORE_ADDRESS, STORE_RATING } from "@/data/site";
+import { absoluteUrl, BRAND, BRAND_FULL, siteUrl, STORE_ADDRESS, STORE_RATING, WHATSAPP_DISPLAY } from "@/data/site";
 import { CartDrawer, MobileDock, NoticeToast } from "@/components/cart-drawer";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -8,7 +8,7 @@ import { InquiryForm } from "@/components/inquiry-form";
 import { MobileDrawer } from "@/components/mobile-drawer";
 import { SearchDialog } from "@/components/search-dialog";
 import { StoreProvider } from "@/components/store";
-// Raj Dryfruits official website layout
+// Ganga Sales | Konatural official website layout
 import "./globals.css";
 
 const serif = Cormorant_Garamond({
@@ -36,22 +36,22 @@ const script = Great_Vibes({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${BRAND} — Premium Dry Fruits, Chocolates, Coffee & Tea | Ahmedabad`,
-    template: `%s · ${BRAND}`,
+    default: "Ganga Sales | Konatural — Naturally Premium, Thoughtfully Presented",
+    template: `%s · Ganga Sales | Konatural`,
   },
   description:
-    "Premium dry fruits, chocolates, coffee, tea and celebration boxes from Raj Dryfruits & Mukhwas, Ahmedabad. Choose your favourites and send a WhatsApp inquiry.",
+    "Discover premium dry fruits, spices, mukhwas and thoughtfully curated gifting collections from Ganga Sales | Konatural, Ahmedabad.",
   openGraph: {
-    title: `${BRAND_FULL} · Ahmedabad`,
-    description: "Premium dry fruits, chocolates, coffee, tea and celebration boxes — ordered through a simple WhatsApp inquiry.",
+    title: "Ganga Sales | Konatural — Naturally Premium, Thoughtfully Presented",
+    description: "Discover premium dry fruits, spices, mukhwas and thoughtfully curated gifting collections from Ganga Sales | Konatural, Ahmedabad.",
     images: ["/images/hero-composition.jpg"],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: BRAND_FULL,
-    description: "Premium dry fruits, chocolates, coffee, tea and celebration boxes, ordered on WhatsApp.",
+    title: "Ganga Sales | Konatural — Naturally Premium, Thoughtfully Presented",
+    description: "Discover premium dry fruits, spices, mukhwas and thoughtfully curated gifting collections from Ganga Sales | Konatural, Ahmedabad.",
     images: ["/images/hero-composition.jpg"],
   },
 };
@@ -63,9 +63,9 @@ const structuredData = {
       "@type": "Store",
       name: BRAND_FULL,
       url: absoluteUrl("/"),
-      telephone: "+91-9712698899",
+      telephone: "+91-82003-66244",
       image: absoluteUrl("/images/hero-composition.jpg"),
-      description: "Premium dry fruits, chocolates, coffee, tea and celebration boxes. Orders are placed as WhatsApp inquiries.",
+      description: "Premium dry fruits, spices, gifting solutions and curated hampers. Inquiries placed directly on WhatsApp.",
       address: {
         "@type": "PostalAddress",
         streetAddress: STORE_ADDRESS.line1 + ", " + STORE_ADDRESS.line2,
@@ -76,7 +76,7 @@ const structuredData = {
       },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.6",
+        ratingValue: "4.9",
         bestRating: "5",
       },
       areaServed: "IN",
@@ -98,17 +98,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable} ${script.variable}`}>
       <body className="bg-white font-sans text-ink antialiased">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <StoreProvider>
-          <Header />
-          <main className="pb-24 lg:pb-0">{children}</main>
-          <Footer />
-          <CartDrawer />
-          <SearchDialog />
-          <NoticeToast />
-          <InquiryForm />
-          <MobileDock />
-          <MobileDrawer />
+          <div className="flex min-h-screen flex-col bg-white">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+            <InquiryForm />
+            <SearchDialog />
+            <MobileDrawer />
+            <MobileDock />
+            <NoticeToast />
+          </div>
         </StoreProvider>
       </body>
     </html>

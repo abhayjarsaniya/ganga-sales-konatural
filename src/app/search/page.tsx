@@ -4,7 +4,7 @@ import { SearchResults } from "@/components/search-results";
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Search Raj dry fruits, chocolates, coffee and tea.",
+  description: "Search Ganga Sales | Konatural premium dry fruits, spices, chocolates, coffee and celebration gift hampers.",
 };
 
 export default function Page() {

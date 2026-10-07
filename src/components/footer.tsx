@@ -36,7 +36,7 @@ export function Footer() {
         <div className="md:col-span-2">
           <BrandMark />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-stone-600">
-            {BRAND_FULL} — Premium dry fruits, chocolates, coffee, tea and celebration boxes in Ahmedabad.
+            {BRAND_FULL} — Naturally premium dry fruits, quality spices, curated celebration hampers and corporate gifting in Ahmedabad.
           </p>
 
           <div className="mt-5 rounded-2xl border border-stone-100 bg-[#fbf9f6] p-4 text-xs leading-relaxed text-stone-600 sm:max-w-md">

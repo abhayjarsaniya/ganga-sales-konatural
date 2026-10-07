@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   BRAND_FULL,
+  FIRM_NAME,
   GOOGLE_MAPS_URL,
   STORE_ADDRESS,
   STORE_NAME,
@@ -14,7 +15,7 @@ import { InquiryLink } from "@/components/inquiry-link";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Raj Dryfruits & Mukhwas is a premium dry fruits, chocolates and celebration boxes store located on Anand Nagar Road, Ahmedabad.",
+    "Ganga Sales | Konatural brings a legacy of trust, quality spices and premium dry fruits since 1996, serving wholesale, retail and luxury curated gifting from Madhupura, Ahmedabad.",
 };
 
 export default function AboutPage() {
@@ -24,21 +25,30 @@ export default function AboutPage() {
         {/* LEFT: Content & Store Details */}
         <article className="flex flex-col">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6E2635]">
-            About Raj Dryfruits &amp; Mukhwas
+            About Ganga Sales | Konatural
           </p>
           <h1 className="mt-2.5 font-serif text-3xl font-medium leading-[1.1] text-ink sm:mt-3 sm:text-5xl lg:text-6xl">
-            Selected Slowly. Inquired Simply.
+            Naturally Premium, Thoughtfully Presented.
           </h1>
 
           <div className="mt-6 space-y-4 text-sm leading-relaxed text-stone-600 sm:mt-8 sm:text-base">
             <p>
-              {BRAND_FULL} is a trusted local destination in Ahmedabad for premium dry fruits, artisanal chocolates, single-origin coffee, fine teas, and festive celebration boxes. Our selection brings together wholesome nuts, rich chocolates and thoughtful gift combinations that we are genuinely proud to present.
+              Konatural is built on an enduring legacy of trust, purity and culinary excellence. Our parent business, <strong>{FIRM_NAME}</strong>, has been an esteemed pillar in the spices and dry fruits trade since <strong>1996</strong> in Madhupura, Ahmedabad — serving both wholesale merchants and discerning retail customers with unwavering integrity.
             </p>
             <p>
-              This website functions as a clean product catalog and WhatsApp inquiry portal. Choose your favourite items and weights freely (up to 10 quantity per product). When ready, share delivery details, and your inquiry opens directly in WhatsApp with {WHATSAPP_DISPLAY}.
+              With decades of deep market experience, we have earned a distinguished reputation for consistent grade standards, authentic sourcing and genuine customer relationships. <strong>Konatural</strong> was created to bring this generational expertise into the modern lifestyle — delivering premium-quality dry fruits, hand-selected nuts, aromatic spices and artisanal delicacies straight to your doorstep.
             </p>
             <p>
-              Our store team personally confirms availability, final pricing, doorstep delivery and any special packaging requests. No confusing checkouts or online payment gateways — just transparent, warm local service.
+              Embracing our philosophy of <em>&ldquo;Naturally Premium, Thoughtfully Presented,&rdquo;</em> we specialize in bespoke celebratory gifting:
+            </p>
+            <ul className="list-disc space-y-1 pl-5 text-stone-700">
+              <li>Luxury Celebration Hampers &amp; Festive Gift Boxes</li>
+              <li>Corporate Gifting Suites tailored for client and employee appreciation</li>
+              <li>Wedding &amp; Special Occasion keepsake packaging</li>
+              <li>Hand-graded dry fruits and natural whole spices</li>
+            </ul>
+            <p>
+              This website serves as our curated digital catalog and direct WhatsApp inquiry portal. Choose your preferred items and quantities, and connect with our team on WhatsApp ({WHATSAPP_DISPLAY}) for personalized order confirmation, custom packaging options and delivery details.
             </p>
           </div>
 
@@ -81,13 +91,13 @@ export default function AboutPage() {
           </div>
         </article>
 
-        {/* RIGHT: Premium Raj Dryfruits Showcase Image */}
+        {/* RIGHT: Premium Showcase Image */}
         <div className="mt-4 lg:mt-0 lg:sticky lg:top-24">
           <div className="overflow-hidden rounded-[24px] border border-[#e6e2dc] bg-[#fbf9f6] p-3 shadow-md sm:rounded-[28px] sm:p-4">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[18px] bg-white sm:rounded-[20px] lg:aspect-[5/4]">
               <Image
                 src="/images/hero-composition.jpg"
-                alt="Premium assortment of dry fruits, almonds, cashews, pistachios, dates and walnuts from Raj Dryfruits Ahmedabad"
+                alt="Premium assortment of dry fruits, almonds, cashews, pistachios, dates and walnuts from Ganga Sales Konatural Ahmedabad"
                 fill
                 priority
                 className="object-contain p-3 transition-transform duration-500 hover:scale-[1.02]"
@@ -96,10 +106,10 @@ export default function AboutPage() {
             </div>
             <div className="mt-3.5 px-2 pb-1 text-center">
               <p className="font-serif text-base font-semibold text-ink sm:text-lg">
-                Raj Dryfruits &amp; Mukhwas
+                {BRAND_FULL}
               </p>
               <p className="mt-0.5 text-xs text-stone-500">
-                100 Feet Anand Nagar Road · Jodhpur Village, Ahmedabad
+                Bardolpura, Madhupura · Ahmedabad
               </p>
             </div>
           </div>
